@@ -1,15 +1,82 @@
-<html>
-  <body>
-    <img src="https://t2.gstatic.com/images?q=tbn:ANd9GcS5U-IHn68oKxu7-a8UT1o36nMkFdE0SV3X6yBYdKt8xoFaxbcXyoa8CTe_qJjEPQZaggzx1Q"
-         height=auto width=auto>
-    <pre>
-      Don't be that person who doesn't have value 
-Don't also be that person who have values 
-Be that person who teaches values
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="g()">CLICK MEEEE</button>
+  <script src="main.js">
+    
+    // Peter Shor's algorithm
+function g() {
+  // Tab to edit
+let n = parseInt(prompt("Enter value of g:  "));
+// Make a bad guess
+let g = 87;
+let r;
+var i = 1
+
+if (n%2===0) {
+  g = 3
+  if (n%3===0) {
+    g = 5
+    if (n%5===0) {
+      g = 7
+    }
+    if (n%7===0) {
+      g = 11
+      if (n%11==0){
+        g = 13
+      }
+    }
+  }
+} else {
+  g = 2
+}
+
+while (i<=n*2) {
+  if ((g ** i) % n === 1) {
+    r = i;
+    break;
+  }
+  else {
+    i += 1
+  }
+}
 
 
-Person forgotten second rangers 
-But second rankers inspires first rankers
-    </pre>
-  </body>
+
+
+var N1 = (g**(r/2))+1
+console.log(N1)
+document.writeln(N1)
+document.writeln('<br>')
+
+
+// program to find the HCF or GCD of two integers
+
+let hcf;
+// take input
+const number1 = n;
+const number2 = N1;
+
+// looping from 1 to number1 and number2
+for (let i = 1; i <= number1 && i <= number2; i++) {
+
+  // check if is factor of both integers
+  if (number1 % i == 0 && number2 % i == 0) {
+    hcf = i;
+  }
+}
+
+// display the hcf
+console.log(`HCF of ${number1} and ${number2} is ${hcf}.`);
+document.writeln(`HCF of ${number1} and ${number2} is ${hcf}.`)
+}
+  </script>
+</body>
 </html>
